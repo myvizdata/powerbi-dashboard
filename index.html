@@ -14,7 +14,7 @@
             background: #f4f7fa; 
         }
         
-        /* Header/Hero Section */
+        /* Hero Section */
         header.hero {
             background: linear-gradient(to right, #0d6efd, #6610f2);
             color: white;
@@ -45,17 +45,18 @@
             background: #e9ecef;
         }
         
-        /* Services Section */
-        section.services {
+        /* Sections (Services, How We Work, Benefits, Why Power BI, Contact) */
+        section {
             padding: 60px 20px;
-            background: white;
             text-align: center;
         }
-        section.services h2 {
+        section h2 {
             font-size: 2.5rem;
             margin-bottom: 40px;
             color: #0d6efd;
         }
+        
+        /* Services */
         .service-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -78,28 +79,61 @@
             margin-bottom: 15px;
             color: #6610f2;
         }
-        .service-item p {
-            font-size: 1.1rem;
+        
+        /* How We Work - Steps */
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .step {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .step-number {
+            background: #0d6efd;
+            color: white;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            margin: 0 auto 15px;
         }
         
-        /* Contact Section */
-        section.contact {
-            padding: 60px 20px;
-            background: #e9ecef;
-            text-align: center;
-        }
-        section.contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #0d6efd;
-        }
-        section.contact p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-        .contact-info {
-            max-width: 600px;
+        /* Benefits & Why Power BI - Cards with images */
+        .benefits-grid, .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
             margin: 0 auto;
+        }
+        .benefit-card, .why-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        .benefit-card img, .why-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            max-height: 220px;
+            object-fit: cover;
+        }
+        
+        /* Contact */
+        section.contact {
+            background: #e9ecef;
         }
         
         /* Footer */
@@ -111,11 +145,10 @@
             font-size: 0.9rem;
         }
         
-        /* Responsiveness */
         @media (max-width: 768px) {
             header.hero h1 { font-size: 2.5rem; }
             header.hero p { font-size: 1.2rem; }
-            section.services h2, section.contact h2 { font-size: 2rem; }
+            section h2 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -150,6 +183,77 @@
         </div>
     </section>
     
+    <!-- How We Work Section -->
+    <section class="how-we-work" style="background: white;">
+        <h2>How We Work – Simple 4-Step Process</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Consultation</h3>
+                <p>We discuss your business needs, data sources, and goals via WhatsApp or call.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Data Connection & Analysis</h3>
+                <p>Connect your Google Sheets/Excel, clean data, and build initial insights.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Dashboard Design</h3>
+                <p>Create custom Power BI dashboard with your branding and key metrics.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Delivery & Ongoing Support</h3>
+                <p>Secure access + scheduled updates and revisions as your business grows.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits of Power BI Section -->
+    <section class="benefits">
+        <h2>Benefits of Using Power BI</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <img src="https://www.silvertouch.ca/wp-content/uploads/2023/10/sales-dashboards-1.png" alt="Interactive Sales Dashboard Example">
+                <h3>Interactive & Real-Time Insights</h3>
+                <p>Drill down into data, filter views, and see updates instantly.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="https://www.spec-india.com/wp-content/uploads/2022/07/sales-analytics-power-bi-1024x553.png" alt="Sales Analytics Power BI Dashboard">
+                <h3>Beautiful Visualizations</h3>
+                <p>Professional charts, maps, and KPIs that make data easy to understand.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="https://www.alphabold.com/wp-content/uploads/2024/10/The-Importance-of-Real-time-Data-Visualizations-in-Power-BI.png.webp" alt="Real-time Data Visualization in Power BI">
+                <h3>Cost-Effective for SMEs</h3>
+                <p>Pro license is affordable, integrates with Microsoft tools you already use.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Choose Power BI Section -->
+    <section class="why-powerbi" style="background: #e9ecef;">
+        <h2>Why Choose Power BI Over Other Tools?</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <img src="https://www.nextbraintech.com/blogim/nb-tableau-vs-power-bi-which-one-is-the-best.png" alt="Power BI vs Tableau Comparison">
+                <h3>Best Microsoft Integration</h3>
+                <p>Seamless with Excel, Teams, SharePoint – no extra learning curve for many SMEs.</p>
+            </div>
+            <div class="why-card">
+                <img src="https://www.holistics.io/blog/content/images/2025/10/image-3.png" alt="BI Tools Comparison Matrix">
+                <h3>More Affordable Pricing</h3>
+                <p>Lower cost than competitors like Tableau, especially for small teams.</p>
+            </div>
+            <div class="why-card">
+                <img src="https://www.alphabold.com/wp-content/uploads/2024/09/best-practices-for-Power-BI-dashboards-design.png.webp" alt="Power BI Dashboard Best Practices">
+                <h3>AI Features & Easy Sharing</h3>
+                <p>Built-in AI insights, natural language queries, and secure embed options.</p>
+            </div>
+        </div>
+    </section>
+    
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
@@ -163,7 +267,7 @@
     
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 VizData. All rights reserved. Serving Malaysian SMEs with pride.</p>
+        <p>© 2026 VizData. All rights reserved. Serving Malaysian SMEs with pride.</p>
     </footer>
 </body>
 </html>
