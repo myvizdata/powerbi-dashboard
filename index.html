@@ -3,271 +3,387 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VizData - Power BI Dashboards for Malaysian SMEs</title>
-    <style>
-        /* Reset and base styles */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Arial', sans-serif; 
-            line-height: 1.6; 
-            color: #333; 
-            background: #f4f7fa; 
-        }
-        
-        /* Hero Section */
-        header.hero {
-            background: linear-gradient(to right, #0d6efd, #6610f2);
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
-        header.hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        header.hero p {
-            font-size: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto 30px;
-        }
-        .cta-button {
-            background: white;
-            color: #0d6efd;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-        .cta-button:hover {
-            background: #e9ecef;
-        }
-        
-        /* Sections (Services, How We Work, Benefits, Why Power BI, Contact) */
-        section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-        section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: #0d6efd;
-        }
-        
-        /* Services */
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .service-item {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .service-item:hover {
-            transform: translateY(-10px);
-        }
-        .service-item h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: #6610f2;
-        }
-        
-        /* How We Work - Steps */
-        .steps {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .step {
-            flex: 1;
-            min-width: 250px;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .step-number {
-            background: #0d6efd;
-            color: white;
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            margin: 0 auto 15px;
-        }
-        
-        /* Benefits & Why Power BI - Cards with images */
-        .benefits-grid, .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .benefit-card, .why-card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            text-align: left;
-        }
-        .benefit-card img, .why-card img {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            max-height: 220px;
-            object-fit: cover;
-        }
-        
-        /* Contact */
-        section.contact {
-            background: #e9ecef;
-        }
-        
-        /* Footer */
-        footer {
-            background: #0d6efd;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-        }
-        
-        @media (max-width: 768px) {
-            header.hero h1 { font-size: 2.5rem; }
-            header.hero p { font-size: 1.2rem; }
-            section h2 { font-size: 2rem; }
-        }
-    </style>
+    <title>VizData - Power BI Dashboard Services for Malaysia SMEs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">Viz<span>Data</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-powerbi">Why Power BI</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#contact" class="cta-button">Contact Us</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <header class="hero">
-        <h1>VizData: Empowering Malaysian SMEs with Data Insights</h1>
-        <p>We specialize in transforming your business data into interactive Power BI dashboards, helping you make smarter decisions effortlessly.</p>
-        <a href="#contact" class="cta-button">Get Started Today</a>
-    </header>
-    
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Your Data into <span class="highlight">Actionable Insights</span></h1>
+                <p class="subtitle">Custom Power BI Dashboard Solutions for Malaysia SMEs</p>
+                <p class="description">Turn your Excel, Google Sheets, and business data into interactive, real-time dashboards that drive smarter decisions and growth.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Get Free Consultation</a>
+                    <a href="#services" class="btn-secondary">View Services</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-text">SMEs Transformed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-text">Dashboards Delivered</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-text">Support Available</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="dashboard-preview">
+                    <div class="dashboard-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="mockup-content">
+                            <div class="chart-row">
+                                <div class="chart bar"></div>
+                                <div class="chart pie"></div>
+                            </div>
+                            <div class="chart-row">
+                                <div class="chart line"></div>
+                                <div class="chart gauge"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="service-grid">
-            <div class="service-item">
-                <h3>Data Analysis</h3>
-                <p>We dive deep into your Google Sheets, Excel, or other data sources to uncover valuable insights tailored for Pahang and Malaysian SMEs.</p>
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="highlight">Services</span></h2>
+                <p>Comprehensive Power BI solutions tailored for Malaysian SMEs</p>
             </div>
-            <div class="service-item">
-                <h3>Custom Power BI Dashboards</h3>
-                <p>Create visually stunning, interactive reports that update in real-time, perfect for tracking sales, inventory, and more.</p>
-            </div>
-            <div class="service-item">
-                <h3>Scheduled Updates & Maintenance</h3>
-                <p>Automate data refreshes and ensure your dashboards stay current with minimal effort from your team.</p>
-            </div>
-            <div class="service-item">
-                <h3>Secure Client Access</h3>
-                <p>Private, password-protected pages for each client to view their dashboards securely.</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- How We Work Section -->
-    <section class="how-we-work" style="background: white;">
-        <h2>How We Work – Simple 4-Step Process</h2>
-        <div class="steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h3>Consultation</h3>
-                <p>We discuss your business needs, data sources, and goals via WhatsApp or call.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h3>Data Connection & Analysis</h3>
-                <p>Connect your Google Sheets/Excel, clean data, and build initial insights.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h3>Dashboard Design</h3>
-                <p>Create custom Power BI dashboard with your branding and key metrics.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">4</div>
-                <h3>Delivery & Ongoing Support</h3>
-                <p>Secure access + scheduled updates and revisions as your business grows.</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Benefits of Power BI Section -->
-    <section class="benefits">
-        <h2>Benefits of Using Power BI</h2>
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <img src="https://www.silvertouch.ca/wp-content/uploads/2023/10/sales-dashboards-1.png" alt="Interactive Sales Dashboard Example">
-                <h3>Interactive & Real-Time Insights</h3>
-                <p>Drill down into data, filter views, and see updates instantly.</p>
-            </div>
-            <div class="benefit-card">
-                <img src="https://www.spec-india.com/wp-content/uploads/2022/07/sales-analytics-power-bi-1024x553.png" alt="Sales Analytics Power BI Dashboard">
-                <h3>Beautiful Visualizations</h3>
-                <p>Professional charts, maps, and KPIs that make data easy to understand.</p>
-            </div>
-            <div class="benefit-card">
-                <img src="https://www.alphabold.com/wp-content/uploads/2024/10/The-Importance-of-Real-time-Data-Visualizations-in-Power-BI.png.webp" alt="Real-time Data Visualization in Power BI">
-                <h3>Cost-Effective for SMEs</h3>
-                <p>Pro license is affordable, integrates with Microsoft tools you already use.</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Why Choose Power BI Section -->
-    <section class="why-powerbi" style="background: #e9ecef;">
-        <h2>Why Choose Power BI Over Other Tools?</h2>
-        <div class="why-grid">
-            <div class="why-card">
-                <img src="https://www.nextbraintech.com/blogim/nb-tableau-vs-power-bi-which-one-is-the-best.png" alt="Power BI vs Tableau Comparison">
-                <h3>Best Microsoft Integration</h3>
-                <p>Seamless with Excel, Teams, SharePoint – no extra learning curve for many SMEs.</p>
-            </div>
-            <div class="why-card">
-                <img src="https://www.holistics.io/blog/content/images/2025/10/image-3.png" alt="BI Tools Comparison Matrix">
-                <h3>More Affordable Pricing</h3>
-                <p>Lower cost than competitors like Tableau, especially for small teams.</p>
-            </div>
-            <div class="why-card">
-                <img src="https://www.alphabold.com/wp-content/uploads/2024/09/best-practices-for-Power-BI-dashboards-design.png.webp" alt="Power BI Dashboard Best Practices">
-                <h3>AI Features & Easy Sharing</h3>
-                <p>Built-in AI insights, natural language queries, and secure embed options.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Basic Dashboard Package</h3>
+                    <p>Perfect for startups and small businesses</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Up to 3 interactive dashboards</li>
+                        <li><i class="fas fa-check"></i> Excel/Google Sheets integration</li>
+                        <li><i class="fas fa-check"></i> Basic KPI tracking</li>
+                        <li><i class="fas fa-check"></i> Monthly data refresh</li>
+                        <li><i class="fas fa-check"></i> 2 rounds of revisions</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price">From RM 1,500</span>
+                        <span class="period">/one-time</span>
+                    </div>
+                </div>
+
+                <div class="service-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Professional Dashboard Package</h3>
+                    <p>Ideal for growing SMEs</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 5-10 custom dashboards</li>
+                        <li><i class="fas fa-check"></i> Multiple data source integration</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics & forecasting</li>
+                        <li><i class="fas fa-check"></i> Weekly auto-refresh</li>
+                        <li><i class="fas fa-check"></i> Custom visualization design</li>
+                        <li><i class="fas fa-check"></i> 3 months support</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price">From RM 3,500</span>
+                        <span class="period">/one-time</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Enterprise Solution</h3>
+                    <p>For established businesses</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Unlimited dashboards</li>
+                        <li><i class="fas fa-check"></i> Real-time data integration</li>
+                        <li><i class="fas fa-check"></i> Machine learning insights</li>
+                        <li><i class="fas fa-check"></i> Daily auto-refresh</li>
+                        <li><i class="fas fa-check"></i> Team training sessions</li>
+                        <li><i class="fas fa-check"></i> 12 months premium support</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price">Custom Quote</span>
+                        <span class="period">Contact for pricing</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    
+
+    <!-- Why Power BI Section -->
+    <section id="why-powerbi" class="why-powerbi">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why <span class="highlight">Power BI</span>?</h2>
+                <p>The ultimate business intelligence tool for Malaysian SMEs</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Real-time Insights</h3>
+                    <p>Make decisions based on live data with automatic refresh schedules</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Cost-Effective</h3>
+                    <p>Affordable licensing with powerful features perfect for SMEs</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Enterprise Security</h3>
+                    <p>Microsoft's robust security protecting your business data</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Access dashboards anywhere on any device</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Easy Integration</h3>
+                    <p>Connect with Excel, SQL, Google Sheets, and 100+ data sources</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Built-in AI capabilities for predictive analytics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Flow Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="highlight">Process</span></h2>
+                <p>Simple 5-step journey from data to insights</p>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Data Submission</h3>
+                        <p>Share your Excel, Google Sheets, or database files securely</p>
+                    </div>
+                    <div class="step-icon">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Dashboard Design</h3>
+                        <p>We create custom interactive Power BI dashboards</p>
+                    </div>
+                    <div class="step-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Client Review</h3>
+                        <p>You review and provide feedback on the layout</p>
+                    </div>
+                    <div class="step-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Web Publishing</h3>
+                        <p>Dashboard published securely to Power BI service</p>
+                    </div>
+                    <div class="step-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Auto-Refresh Setup</h3>
+                        <p>Schedule automatic data updates (daily/weekly/monthly)</p>
+                    </div>
+                    <div class="step-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-info">
-            <p>Ready to boost your business with data? Reach out to Song Lin for a free consultation.</p>
-            <p><strong>WhatsApp:</strong> +60 [Your Number Here]</p>
-            <p><strong>Email:</strong> [your.email@example.com]</p>
-            <p><strong>Location:</strong> Bentong Town, Pahang, Malaysia</p>
+        <div class="container">
+            <div class="section-header">
+                <h2>Get Your <span class="highlight">Free Consultation</span></h2>
+                <p>Contact us today to transform your data into powerful insights</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Serving SMEs Across Malaysia</p>
+                            <p>Kuala Lumpur | Penang | Johor Bahru</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>hello@vizdata.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+603-XXXX XXXX</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 9AM - 6PM</p>
+                            <p>Saturday: 10AM - 2PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" placeholder="Company Name" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" required>
+                                <option value="" disabled selected>Select Service Interest</option>
+                                <option value="basic">Basic Dashboard Package</option>
+                                <option value="professional">Professional Dashboard Package</option>
+                                <option value="enterprise">Enterprise Solution</option>
+                                <option value="notsure">Not Sure - Need Advice</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Tell us about your data and requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
-    <footer>
-        <p>© 2026 VizData. All rights reserved. Serving Malaysian SMEs with pride.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home" class="logo">Viz<span>Data</span></a>
+                    <p>Transforming Malaysian SMEs with Power BI dashboard solutions since 2023</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#why-powerbi">Why Power BI</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#services">Power BI Dashboard Design</a></li>
+                        <li><a href="#services">Data Integration</a></li>
+                        <li><a href="#services">Dashboard Training</a></li>
+                        <li><a href="#services">Maintenance & Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 VizData. All rights reserved. | Specializing in Power BI solutions for Malaysia SMEs</p>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
